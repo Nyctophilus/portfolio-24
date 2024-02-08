@@ -28,7 +28,7 @@ const Portfolio = () => {
       transition={{ duration: 1 }}
       className="h-full"
     >
-      <section className="snap-start h-[100dvh] flex items-center justify-center text-8xl text-center">
+      <section className="h-[calc(100dvh-80px)] flex items-center justify-center text-8xl text-center">
         My Works
       </section>
 
@@ -52,14 +52,17 @@ const Portfolio = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
+              <textPath
+                xlinkHref="#circlePath"
+                className="text-xl dark:fill-white"
+              >
                 Front-end web Developer & PS Designer
               </textPath>
             </text>
           </motion.svg>
           <Link
             href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
+            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white dark:text-black dark:bg-white rounded-full flex items-center justify-center"
           >
             Hire Me
           </Link>
