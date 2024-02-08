@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./navbar";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import whatsapp from "/public/whatsapp.svg";
@@ -55,7 +55,9 @@ const TransitionProvider = ({ children }) => {
             </>
           )}
           <Navbar />
-          <main className="min-h-[100dvh]">{children}</main>
+          <main className="min-h-[100dvh]">
+            <Suspense>{children}</Suspense>
+          </main>
         </div>
       </AnimatePresence>
       <Link

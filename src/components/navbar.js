@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "/public/logo.png";
 import { links } from "@/static-data";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import Socials from "./socials";
@@ -113,7 +113,9 @@ const Navbar = () => {
         )}
       </div>
 
-      <Switch />
+      <Suspense>
+        <Switch />
+      </Suspense>
     </nav>
   );
 };
