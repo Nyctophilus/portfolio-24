@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="h-full mt-28"
+      className="h-full py-28"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}

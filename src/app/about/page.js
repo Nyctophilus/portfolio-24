@@ -80,7 +80,7 @@ const AboutPage = () => {
             id="skills"
           >
             <motion.h1
-              initial={{ x: "-500px" }}
+              initial={{ x: -200 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
               className="font-bold text-2xl"
@@ -88,7 +88,7 @@ const AboutPage = () => {
               SKILLS
             </motion.h1>
             <motion.div
-              initial={{ x: "-500px" }}
+              initial={{ x: -200 }}
               whileInView={{ x: 0 }}
               transition={{ type: "spring" }}
               className="flex gap-4 flex-wrap"

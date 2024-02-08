@@ -22,10 +22,10 @@ const ExpItem = ({ align, title, desc, date, company }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex justify-between h-48"
+      className="flex justify-between h-fit"
     >
       {/* LEFT */}
-      <div className="w-1/3">{align === "left" && exp}</div>
+      <div className="w-1/3 pb-12">{align === "left" && exp}</div>
       {/* CENTER */}
       <div className="w-1/6 flex justify-center">
         <div className="w-1 h-full bg-gray-600 rounded relative">

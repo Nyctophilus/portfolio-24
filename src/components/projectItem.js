@@ -24,7 +24,7 @@ const ProjectItem = ({
 
   return (
     <div
-      className="snap-start mx-auto h-[100dvh] flex items-center justify-center bg-gradient-to-r from-sky-50 to-indigo-100 dark:from-slate-950 dark:to-[#0f0505]"
+      className="snap-start mx-auto min-h-[100dvh] flex items-center justify-center bg-gradient-to-r from-sky-50 to-indigo-100 dark:from-slate-950 dark:to-[#0f0505]"
       key={id}
     >
       <motion.div

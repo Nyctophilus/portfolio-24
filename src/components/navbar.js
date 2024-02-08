@@ -9,9 +9,11 @@ import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import Socials from "./socials";
 import Switch from "./switch";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const topVariant = {
     closed: { rotate: 0 },
@@ -67,13 +69,17 @@ const Navbar = () => {
       </div>
 
       {/* socials */}
-      <Socials />
+      <Socials toggleBtn />
 
       {/* menu */}
-      <div className="md:hidden">
+      <div className="md:hidden flex gap-5 items-center">
+        <Suspense>
+          <Switch />
+        </Suspense>
+
         <button
           className="w-10 h-8 flex flex-col justify-between relative z-50 "
-          onClick={() => setOpen((prev) => !prev)}
+          onClick={() => setOpen(!open)}
         >
           <motion.div
             variants={topVariant}
@@ -105,6 +111,12 @@ const Navbar = () => {
                 key={url}
                 href={url}
                 className="capitalize"
+                onClick={(e) => {
+                  if (url === pathname) {
+                    e.preventDefault();
+                    setOpen(false);
+                  }
+                }}
               >
                 {title}
               </MotionLink>
@@ -112,10 +124,6 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-
-      <Suspense>
-        <Switch />
-      </Suspense>
     </nav>
   );
 };

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import Switch from "./switch";
 
-const Socials = () => {
+const Socials = ({ toggleBtn }) => {
   return (
-    <div className="hidden md:flex gap-4">
+    <div className="hidden md:flex items-center gap-4">
       <Link href="https://www.linkedin.com/in/MuhammedFayad" target="_blank">
         <Image src="/linkedin.png" alt="linkedin logo" height={24} width={24} />
       </Link>
@@ -33,6 +35,12 @@ const Socials = () => {
           width={24}
         />
       </Link>
+
+      {toggleBtn && (
+        <Suspense>
+          <Switch />
+        </Suspense>
+      )}
     </div>
   );
 };

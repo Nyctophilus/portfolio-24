@@ -8,18 +8,16 @@ const Switch = () => {
   const router = useRouter();
   const params = useSearchParams();
   const isDark = params.get("isDark");
-
+  
   useEffect(() => {
-    const store = localStorage.getItem("isDark");
-    store && router.push(`?isDark=${store}`);
+    const storeDark = localStorage.getItem("isDark");
+    storeDark && router.push(`?isDark=${storeDark}`);
+
     isDark === "true"
       ? document?.body.classList.add("dark")
       : document?.body.classList.remove("dark");
-  }, []);
+  }, [isDark]);
 
-  isDark === "true"
-    ? document?.body.classList.add("dark")
-    : document?.body.classList.remove("dark");
 
   return (
     <button
