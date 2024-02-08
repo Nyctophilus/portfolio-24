@@ -30,17 +30,17 @@
 <br>
 
 ## up-to-do
-- [ ] dark-light toggle
-- [ ] scroll bar
+- [x] dark-light toggle
+- [x] custom scroll bar
 - [ ] form validation
 - [ ] update metadata
-- [ ] sidebar
-- [ ] floating whatsapp button wa.link/syyevq
-- [ ] adjust linking sections postion when press on navLink, stop at 100px-ish top of the setion
+- [ ] floating sidebar
+- [x] floating whatsapp button wa.link/syyevq
+- [x] adjust linking sections postion when press on navLink, stop at 100px-ish top of the setion
 - [x] navbar transparency
-- [ ] footer typography
-- [ ] connect to db to create projects (admin dashboard)
-- [ ] connect to db to add testimonials
+- [-] footer typography
+- [ ] connect to db to create projects dynamically (admin dashboard)
+- [ ] connect to db to allow adding testimonials
 
 ## Contact
 🤩 Leave a :star:&nbsp;if you like it, Please!
