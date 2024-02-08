@@ -13,9 +13,12 @@ const Portfolio = () => {
   const isDark = params.get("isDark");
 
   useEffect(() => {
-    router.replace(`?isDark=${isDark}&count=${projects.length}`, {
-      scroll: false,
-    });
+    router.replace(
+      `?isDark=${isDark ? true : false}&count=${projects.length}`,
+      {
+        scroll: false,
+      }
+    );
   }, [router]);
 
   return (

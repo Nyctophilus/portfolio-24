@@ -13,13 +13,13 @@ const Switch = () => {
     const store = localStorage.getItem("isDark");
     store && router.push(`?isDark=${store}`);
     isDark === "true"
-      ? document.body.classList.add("dark")
-      : document.body.classList.remove("dark");
+      ? document?.body.classList.add("dark")
+      : document?.body.classList.remove("dark");
   }, []);
 
   isDark === "true"
-    ? document.body.classList.add("dark")
-    : document.body.classList.remove("dark");
+    ? document?.body.classList.add("dark")
+    : document?.body.classList.remove("dark");
 
   return (
     <button
