@@ -1,10 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const ExpItem = ({ align, title, desc, date, company }) => {
+  const [mob, setMob] = useState(true);
+
+  useEffect(() => {
+    setMob(window.innerWidth < 768);
+  }, []);
+
   const exp = (
     <>
-      <div className="bg-white dark:text-black p-3 font-semibold rounded-b-lg rounded-s-lg">
+      <div className="bg-white dark:text-black p-3 font-semibold rounded-b-lg rounded-s-lg capitalize">
         {title}
       </div>
       <div className="p-3 text-sm italic">{desc}</div>
@@ -25,7 +32,7 @@ const ExpItem = ({ align, title, desc, date, company }) => {
       className="flex justify-between h-fit"
     >
       {/* LEFT */}
-      <div className="w-1/3 pb-12">{align === "left" && exp}</div>
+      {!mob && <div className="w-1/3">{align === "left" && exp}</div>}
       {/* CENTER */}
       <div className="w-1/6 flex justify-center">
         <div className="w-1 h-full bg-gray-600 rounded relative">
@@ -33,7 +40,9 @@ const ExpItem = ({ align, title, desc, date, company }) => {
         </div>
       </div>
       {/* RIGHT */}
-      <div className="w-1/3">{align === "right" && exp}</div>
+      <div className={`${mob ? "w-5/6" : "w-1/3"} pb-12`}>
+        {mob ? exp : align === "right" && exp}
+      </div>
     </motion.div>
   );
 };

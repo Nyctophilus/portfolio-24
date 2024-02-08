@@ -10,7 +10,7 @@ const Homepage = () => {
       initial={{ y: "-200%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
-      className="container h-[calc(100dvh-6rem)] mx-auto px-4 flex flex-col md:flex-row gap-16 md:gap-10 mt-12"
+      className="container h-[calc(100dvh-80px)] mx-auto px-4 flex flex-col md:flex-row gap-16 md:gap-10 mt-12"
     >
       {/* image container */}
       <div className="h-1/2 w-full md:h-full md:w-1/2 relative">

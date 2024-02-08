@@ -30,7 +30,7 @@ export const exp = [
     align: "left",
     title: "Went To College",
     desc: "I went to college, where i started studying engineering. A year after, i specialized in comupter major.",
-    date: "2017 - 2022",
+    date: "2017",
     company: "Pharos University",
   },
   {
@@ -58,7 +58,14 @@ export const exp = [
     align: "left",
     title: "Compeleted military service",
     desc: "I have demonstrated a keen eye for design and an understanding of user experience principles. I was the head designer of a printing center that was responsible for designing and printing on all sorts of materials such as banners, vinyl, flex, Also thermal printing like on T-shirts, cups, wood, and metal.",
-    date: "2023-2024",
+    date: "2022-2024",
+    company: "",
+  },
+  {
+    align: "right",
+    title: "continue my freelancing journey",
+    desc: "I have successfully managed to earn 2 gigs with 2 clients. One is English doing upgrades upon my previous work for her. Another one is Saudi Steel company requires a portfolio webpage for their affairs. ",
+    date: "Jan 2024",
     company: "",
   },
 ];
