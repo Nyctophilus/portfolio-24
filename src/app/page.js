@@ -26,13 +26,13 @@ const Homepage = () => {
       {/* text container */}
       <div className="h-1/2 w-full md:h-full md:w-1/2 flex flex-col gap-8 justify-center">
         <h1 className="text-4xl md:text-6xl font-black">
-          Hi, I'm Mohamed Fayad
+          Hi, I&apos;m Mohamed Fayad
         </h1>
         <p>
-          I'm Computer Engineering graduate specializing in Web Development. I
-          fond of creating beautiful fluid eye-pleasing websites. I'm a highly
-          self-motivated Agilest developer, I create full-stack web apps by
-          (Next14 | Tailwind | Mongoose)
+          I&apos;m Computer Engineering graduate specializing in Web
+          Development. I fond of creating beautiful fluid eye-pleasing websites.
+          I&apos;m a highly self-motivated Agilest developer, I create
+          full-stack web apps by (Next14 | Tailwind | Mongoose)
         </p>
         <div className="flex gap-4">
           <Link
