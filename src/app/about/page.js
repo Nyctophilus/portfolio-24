@@ -14,7 +14,7 @@ const AboutPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full overflow-scroll lg:flex">
+      <div className="h-full lg:flex overflow-hidden">
         <div className="px-4 container mx-auto grid">
           {/* BIOGRAPHY */}
           <div className="flex flex-col gap-6 justify-center mt-16">

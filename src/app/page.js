@@ -38,6 +38,7 @@ const Homepage = () => {
           <Link
             href="https://drive.google.com/file/d/1fxP5qrmVgm8dNeEaW73W8RZXGP5zSVT0/view"
             className="btn"
+            target="_blank"
           >
             download CV
           </Link>

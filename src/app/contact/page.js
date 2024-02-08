@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Socials from "@/components/socials";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -43,8 +44,8 @@ const Contact = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col lg:flex-row px-4 gap-12 lg:gap-2 container mx-auto">
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
-          <div className="text-center">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-12 items-center justify-center">
+          <div className="text-center text-6xl">
             {text.split("").map((letter, index) => (
               <motion.span
                 key={index}
@@ -61,6 +62,14 @@ const Contact = () => {
             ))}
             😊
           </div>
+          <p className="font-semibold px-12">
+            I'm currently looking for new opportunities, my inbox is always
+            open. Whether you have a question or just want to say hi, I'll try
+            my best to get back to you!
+          </p>
+          <span className="self-start ps-12 -mt-8">
+            <Socials />
+          </span>
         </div>
         <form
           onSubmit={sendEmail}

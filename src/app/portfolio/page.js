@@ -5,12 +5,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { projects } from "@/static-data";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Portfolio = () => {
   const router = useRouter();
+  const params = useSearchParams();
+  const isDark = params.get("isDark");
+
   useEffect(() => {
-    router.replace(`?count=${projects.length}`, { scroll: false });
+    router.replace(`?isDark=${isDark}&count=${projects.length}`, {
+      scroll: false,
+    });
   }, [router]);
 
   return (
