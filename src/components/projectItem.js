@@ -66,7 +66,7 @@ const ProjectItem = ({
 
           <div className="flex gap-4 flex-wrap">
             {skills.map((skill, i) => (
-              <Skill skill={skill} key={i} i={i} />
+              <Skill skill={skill} key={i} i={i} portfolio />
             ))}
           </div>
 

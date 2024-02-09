@@ -32,9 +32,9 @@ const TransitionProvider = ({ children }) => {
           {!out && (
             <>
               <motion.div
-                className="w-[100dvw] h-[100dvh] fixed bg-black rounded-b-[100px] z-50"
+                className="w-[100dvw] h-[100dvh] fixed bg-black rounded-b-[50%] z-50"
                 animate={{ height: "0dvh" }}
-                exit={{ height: "140dvh" }}
+                exit={{ height: "150dvh" }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               />
               <motion.div
@@ -48,8 +48,8 @@ const TransitionProvider = ({ children }) => {
               </motion.div>
 
               <motion.div
-                className="w-[100dvw] h-[100dvh] fixed bg-black rounded-t-[100px] bottom-0 z-40"
-                initial={{ height: "140dvh" }}
+                className="w-[100dvw] h-[100dvh] fixed bg-black rounded-t-[50%] bottom-0 z-40"
+                initial={{ height: "150dvh" }}
                 animate={{ height: "0dvh", transition: { delay: 0.5 } }}
               />
             </>
