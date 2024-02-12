@@ -55,7 +55,7 @@ const TransitionProvider = ({ children }) => {
             </>
           )}
           <Navbar />
-          <main className="min-h-[calc(100dvh-80px)]">
+          <main className="min-h-[calc(100dvh-80px)] grid">
             <Suspense>{children}</Suspense>
           </main>
         </div>

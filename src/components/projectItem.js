@@ -24,7 +24,7 @@ const ProjectItem = ({
 
   return (
     <div
-      className="snap-start mx-auto min-h-[100dvh] flex items-center justify-center bg-gradient-to-r from-sky-50 to-indigo-100 dark:from-slate-950 dark:to-[#0f0505]"
+      className="snap-start mx-auto min-h-[100dvh] pt-20 flex items-center justify-center bg-gradient-to-r from-sky-50 to-indigo-100 dark:from-slate-950 dark:to-[#0f0505]"
       key={id}
     >
       <motion.div
@@ -33,10 +33,10 @@ const ProjectItem = ({
           opacity: opcityProgress,
           scale: scaleProgress,
         }}
-        className={`flex flex-col lg:flex-row gap-12 mt-7 lg:mt-0 lg:pt-20 dark:text-white rounded-3xl bg-slate-50 dark:bg-slate-900 max-w-[90dvw]`}
+        className="flex flex-col lg:flex-row gap-12 mt-7 lg:mt-0 lg:pt-20 dark:text-white rounded-3xl bg-slate-50 dark:bg-slate-900 max-w-[90dvw]"
       >
         <div
-          className={`relative w-full h-52 md:h-64  lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] rounded-tl-3xl rounded-tr-3xl shadow-2xl overflow-hidden ${
+          className={`relative w-full h-80 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px] rounded-tl-3xl rounded-tr-3xl shadow-2xl overflow-hidden ${
             index % 2
               ? "lg:rounded-tr-3xl lg:rounded-tl-none shadow-[16px_0px_50px_0px_#00000050] hover:rotate-1 origin-bottom-left"
               : "lg:rounded-tl-3xl lg:rounded-tr-none -shadow-[16px_0px_50px_0px_#00000050] hover:-rotate-1 origin-bottom-right"
@@ -49,6 +49,7 @@ const ProjectItem = ({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
             loading="lazy"
+            className="object-cover object-top"
           />
         </div>
 
@@ -60,7 +61,7 @@ const ProjectItem = ({
           <h1 className="text-3xl font-bold md:text-4xl lg:text-6xl">
             {title}
           </h1>
-          <p className="w-64 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+          <p className="w-full lg:w-[500px] lg:text-lg xl:w-[600px]">
             {description}
           </p>
 
