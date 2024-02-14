@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Bubbles from "@/components/bubbles";
 
 const Homepage = () => {
   return (
@@ -24,7 +25,8 @@ const Homepage = () => {
       </div>
 
       {/* text container */}
-      <div className="h-1/2 w-full md:h-full md:w-1/2 flex flex-col gap-4 justify-center">
+      <div className="h-1/2 w-full md:h-full md:w-1/2 flex flex-col gap-4 justify-center relative">
+        <Bubbles />
         <h1 className="text-4xl md:text-6xl font-black">
           Hi, I&apos;m Mohamed Fayad
         </h1>
