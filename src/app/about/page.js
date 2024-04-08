@@ -121,8 +121,8 @@ const AboutPage = () => {
               whileInView={{ x: 0 }}
               transition={{ duration: 1 }}
             >
-              {exp.map((e) => (
-                <ExpItem key={e.title + e.desc} {...e} />
+              {exp.map((e, i) => (
+                <ExpItem key={e.title + e.desc} i={i} {...e} />
               ))}
             </motion.div>
           </div>

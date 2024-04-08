@@ -6,12 +6,15 @@ export const links = [
 ];
 
 export const skills = [
-  "mongoose",
+  "MySQL",
   "nextjs",
   "react",
-  "node.js",
-  "express.Js",
+  "nodejs",
+  "expressjs",
+  "mongoose",
+  "REST APIs",
   "redux",
+  "tailwind",
   "typescript",
   "framer-motion",
   "shadcnUI",
@@ -29,46 +32,37 @@ export const skills = [
 
 export const exp = [
   {
-    align: "left",
-    title: "Went To College",
-    desc: "I went to college, where i started studying engineering. A year after, i specialized in comupter major.",
-    date: "2017",
-    company: "Pharos University",
+    title: "Fullstack Developer (remote)",
+    desc: [
+      "responsible for designing the apps architecture.",
+      "responsible for creating Databases using MySQL.",
+      "responsible for mutating data on the server using Next.js server actions & SSR.",
+      "responsible for optimizing Performance and enchanting SEO using Next.js features.",
+      "responsible for creating Appling and smooth UIs and animations with the help of libs such as framer-motion & shadcn/ui.",
+    ],
+    date: "Jan 2024",
+    company: "Romeya Agency",
   },
   {
-    align: "right",
-    title: "Ground Training",
-    desc: "Got Involved in the software development life cycle. learned how to plan for Software Design, Deployment and Maintenance. Collaborated with the team to identify customer requirements at the tech meeting, Learnt how the company signs actual contracts. Documented a report about client requirements in the meeting with different-role stakeholders.",
+    title: "Started freelancing",
+    desc: [
+      "I've managed to secure my first freelance gig with an English client and developed a complete website for law purposes and her business. the website was over 40 pages.",
+      "Cooperated with backend dev to integrate payment gateway via Al-Ahly bank.",
+    ],
+    date: "Dec 2021",
+    company: "",
+  },
+  {
+    title: "Software Internship",
+    desc: [
+      "Got Involved in the software development life cycle.",
+      "learned how to plan for Software Design, Deployment and Maintenance.",
+      "Collaborated with the team to identify customer requirements at the tech meeting.",
+      "Learnt how the company signs actual contracts.",
+      "Documented a report about client requirements in the meeting with different-role stakeholders.",
+    ],
     date: "May 2019 - Aug 2019",
     company: "Egypt Experts",
-  },
-  {
-    align: "left",
-    title: "Started freelancing",
-    desc: "I've managed to secure my first freelance gig with an English client and developed a complete website for law purposes and her business. the website was over 40 pages. Cooperated with backend dev to integrate payment method through Al-Ahly bank.",
-    date: "Dec 2021 - May 2022",
-    company: "",
-  },
-  {
-    align: "right",
-    title: "Graduation",
-    desc: "Graduated from the college with B+ overall degree.",
-    date: "2022",
-    company: "Pharos University",
-  },
-  {
-    align: "left",
-    title: "Compeleted military service",
-    desc: "I have demonstrated a keen eye for design and an understanding of user experience principles. I was the head designer of a printing center that was responsible for designing and printing on all sorts of materials such as banners, vinyl, flex, Also thermal printing like on T-shirts, cups, wood, and metal.",
-    date: "2022-2024",
-    company: "",
-  },
-  {
-    align: "right",
-    title: "continue my freelancing journey",
-    desc: "I have successfully managed to earn 2 gigs with 2 clients. One is English doing upgrades upon my previous work for her. Another one is Saudi Steel company requires a portfolio webpage for their affairs. ",
-    date: "Jan 2024",
-    company: "",
   },
 ];
 
@@ -168,7 +162,7 @@ export const projects = [
   {
     id: 7,
     title: "my old Portfolio",
-    description: `y personal portfolio. I've tried to gather all the tricks & workarounds I learned so far, So it will serve as a showcase of my present skills! ,and my ability of build from scratch.`,
+    description: `my personal portfolio. I've tried to gather all the tricks & workarounds I learned so far, So it will serve as a showcase of my present skills! ,and my ability of build from scratch.`,
     image:
       "https://nyctophilus.github.io/Portfolio/assets/images/portfolio/Portfolio.webp",
     gitUrl: "https://github.com/Nyctophilus/Portfolio",
