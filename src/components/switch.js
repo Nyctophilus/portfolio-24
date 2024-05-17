@@ -1,45 +1,53 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Switch = () => {
-  const router = useRouter();
-  const params = useSearchParams();
-  const isDark = params.get("isDark");
-  
+  const [isDark, setIsDark] = useState(true);
+  const handleChangeTheme = () => {
+    document.documentElement.classList.toggle("dark");
+    setIsDark(!isDark);
+    isDark
+      ? localStorage.setItem("theme", "light")
+      : localStorage.setItem("theme", "dark");
+  };
+
   useEffect(() => {
-    const storeDark = localStorage.getItem("isDark");
-    storeDark && router.push(`?isDark=${storeDark}`);
+    if (document?.readyState) {
+      setIsDark(document.documentElement.classList.contains("dark"));
 
-    isDark === "true"
-      ? document?.body.classList.add("dark")
-      : document?.body.classList.remove("dark");
-  }, [isDark]);
-
+      // On page load or when changing themes with respecting the operating system preference
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }
+  }, []);
 
   return (
     <button
       className="toggleBtn"
-      data-darkmode={isDark === "true"}
-      style={{ justifyContent: isDark === "true" ? "flex-end" : "flex-start" }}
-      onClick={() => {
-        router.push(`?isDark=${isDark === "true" ? false : true}`);
-        localStorage.setItem("isDark", isDark === "true" ? false : true);
-      }}
+      data-darkmode={isDark}
+      style={{ justifyContent: isDark ? "flex-end" : "flex-start" }}
+      onClick={handleChangeTheme}
     >
       <motion.div layout className="handle">
         <AnimatePresence mode="wait" initial={false}>
           <motion.i
             className="icon"
-            key={isDark === "true" ? "moon" : "sun"}
+            key={isDark ? "moon" : "sun"}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 30, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {isDark === "true" ? <>&#127769;</> : <>&#9788;</>}
+            {isDark ? <>&#127769;</> : <>&#9788;</>}
           </motion.i>
         </AnimatePresence>
       </motion.div>

@@ -3,42 +3,15 @@
 @tailwind utilities;
 
 
-:root{
-  --primary: white;
-}
-
-
-::selection {
-  @apply bg-red-200
-}
-
-::-webkit-scrollbar {
- @apply w-1 
-}
-
-::-webkit-scrollbar-thumb {
-  border: 2px solid var(--background-start-rgb);
-  @apply bg-amber-600 rounded-2xl 
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-blue-100 dark:bg-slate-950 
-}
-
-.btn {
-  @apply capitalize px-5 py-2 border ring-1 ring-black dark:invert rounded-xl text-black bg-white hover:bg-black hover:text-white duration-300;
-}
-
-.btn-alt {
-  @apply capitalize px-5 py-2 ring-1 ring-black dark:invert rounded-xl bg-black  text-white hover:bg-white  hover:text-black duration-300;
-}
-
-
-.dark{
-  --primary: black;
-  background-color: #52527a;
-}
-
+:root{--primary: white;}
+html{scroll-behavior: smooth;}
+::selection {@apply bg-red-200}
+::-webkit-scrollbar {@apply w-1 }
+::-webkit-scrollbar-thumb {border: 2px solid var(--background-start-rgb);@apply bg-amber-600 rounded-2xl }
+::-webkit-scrollbar-track {@apply bg-blue-100 dark:bg-slate-950 }
+.btn {@apply capitalize px-5 py-2 border ring-1 ring-black dark:invert rounded-xl text-black bg-white hover:bg-black hover:text-white duration-300;}
+.btn-alt {@apply capitalize px-5 py-2 ring-1 ring-black dark:invert rounded-xl bg-black  text-white hover:bg-white  hover:text-black duration-300;}
+.dark{--primary: black;background-color: #52527a;}
 .toggleBtn {
   height: 40px;
   width: 100px;
@@ -63,10 +36,7 @@
   background-color: #fff;
   overflow: hidden;
 }
-.icon {
-  color: #f88748;
-}
-
+.icon {color: #f88748;}
 .dark .toggleBtn  {
   background-color: #52527a;
   background-image: linear-gradient(109.8deg,
@@ -74,6 +44,4 @@
                     rgba(41,14,151,1) -5.2%, 
                     rgba(216,68,148,1) 103.3%);
 }
-.dark .icon {
-  color: #501a96;
-}
+.dark .icon {color: #501a96;}

@@ -18,7 +18,7 @@ const AboutPage = () => {
       <div className="h-full lg:flex overflow-hidden">
         <div className="px-4 container mx-auto grid">
           {/* BIOGRAPHY */}
-          <div className="relative flex flex-col gap-6 justify-center mt-16">
+          <div className="relative flex flex-col gap-6 justify-center mt-16 lg:mt-32">
             <Bubbles />
             <motion.span initial={{ x: -200 }} whileInView={{ x: 0 }}>
               <Image

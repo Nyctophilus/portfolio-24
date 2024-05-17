@@ -4,23 +4,8 @@ import ProjectItem from "@/components/projectItem";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { projects } from "@/static-data";
-import { useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
 
 const Portfolio = () => {
-  const router = useRouter();
-  const params = useSearchParams();
-  const isDark = params.get("isDark");
-
-  useEffect(() => {
-    router.replace(
-      `?isDark=${isDark ? true : false}&count=${projects.length}`,
-      {
-        scroll: false,
-      }
-    );
-  }, [router]);
-
   return (
     <motion.div
       initial={{ y: "-200vh" }}
@@ -28,13 +13,39 @@ const Portfolio = () => {
       transition={{ duration: 1 }}
       className="h-full"
     >
-      <section className="h-[calc(100dvh-80px)] flex items-center justify-center text-8xl text-center">
-        My Works
+      <section className="h-[calc(100vh-80px)] flex items-center justify-center relative">
+        <h1 className="text-[10dvw] lg:text-8xl text-center">My Work</h1>
+
+        <Link className="absolute bottom-10 animate-bounce" href="#projects">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-primary size-12 rotate-90"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M5 12l14 0"
+              strokeDasharray="50%"
+              strokeDashoffset="50%"
+            ></path>
+            <path d="M13 18l6 -6"></path>
+            <path d="M13 6l6 6"></path>
+          </svg>
+        </Link>
       </section>
 
-      {projects.map((project, index) => (
-        <ProjectItem key={project.id} {...project} index={index} />
-      ))}
+      <section id="projects">
+        {projects.map((project, index) => (
+          <ProjectItem key={project.id} {...project} index={index} />
+        ))}
+      </section>
 
       <section className="snap-start h-[100dvh] flex flex-col gap-16 items-center justify-center text-center -z-10">
         <h1 className="text-4xl md:text-8xl">Do you have a opportunity?</h1>
@@ -56,7 +67,7 @@ const Portfolio = () => {
                 xlinkHref="#circlePath"
                 className="text-xl dark:fill-white"
               >
-                Front-end web Developer & PS Designer
+                MERN Stack Developer & PS Designer
               </textPath>
             </text>
           </motion.svg>

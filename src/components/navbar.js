@@ -103,7 +103,7 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="fixed z-10 top-0 left-0 w-[100dvw] h-[100dvh] bg-black text-white flex flex-col gap-8 items-center justify-center text-4xl"
+            className="absolute z-10 -top-5 left-0 w-[99dvw] h-[100dvh] bg-black text-white flex flex-col gap-8 items-center justify-center text-4xl"
           >
             {links.map(({ url, title }) => (
               <MotionLink

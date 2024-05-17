@@ -72,13 +72,19 @@ const ProjectItem = ({
           </div>
 
           <div className="flex gap-2 mt-auto mb-2 self-end">
-            <Link
-              href={gitUrl}
-              target="_blank"
-              className="p-2 text-sm md:p-4 md:text-md ring ring-gray-800 dark:ring-white lg:text-lg text-white bg-gray-800 hover:bg-transparent hover:text-gray-800 transition-colors dark:bg-white dark:text-gray-800 dark:hover:text-white dark:hover:bg-transparent font-semibold m-4 rounded"
-            >
-              GitHub repo
-            </Link>
+            {gitUrl ? (
+              <Link
+                href={gitUrl}
+                target="_blank"
+                className="p-2 text-sm md:p-4 md:text-md ring ring-gray-800 dark:ring-white lg:text-lg text-white bg-gray-800 hover:bg-transparent hover:text-gray-800 transition-colors dark:bg-white dark:text-gray-800 dark:hover:text-white dark:hover:bg-transparent font-semibold m-4 rounded"
+              >
+                GitHub repo
+              </Link>
+            ) : (
+              <div className="cursor-not-allowed p-2 text-sm md:p-4 md:text-md ring ring-gray-400 dark:ring-white lg:text-lg text-white bg-gray-400 transition-colors dark:bg-white dark:text-gray-400 font-semibold m-4 rounded">
+                Private Project
+              </div>
+            )}
             <Link
               href={previewUrl}
               target="_blank"
