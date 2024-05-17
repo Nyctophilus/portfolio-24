@@ -14,9 +14,9 @@ const Portfolio = () => {
       className="h-full"
     >
       <section className="h-[calc(100vh-80px)] flex items-center justify-center relative">
-        <h1 className="text-[10dvw] lg:text-8xl text-center">My Work</h1>
+        <h1 className="text-[10svw] lg:text-8xl text-center">My Work</h1>
 
-        <Link className="absolute bottom-10 animate-bounce" href="#projects">
+        <Link className="absolute bottom-14 animate-bounce" href="#projects">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

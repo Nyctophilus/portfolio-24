@@ -74,8 +74,7 @@ export const projects = [
       "Law Firm Freelance Website. The most of my creations that i'm proud of in terms of ui. It's Just a pleasing to the eye. I created it with Next.js and Tailwind. I used Framer Motion for animations and Shadcn UI for styling.",
     image: "/projects/law-firm.png",
     gitUrl: "",
-    previewUrl:
-      "https://law-firm-jeigs4qlo-muhammed-youssrys-projects.vercel.app/",
+    previewUrl: "https://law-firm-azure-seven.vercel.app",
     skills: ["nextjs", "react", "tailwind", "framer-motion", "shadcn/ui"],
   },
   {
@@ -85,8 +84,7 @@ export const projects = [
       "Tameeni is one of my latest freelance web projects. It is a React TypeScript app leverage Socket.io to help with chat and instant admin premissions. Saudi Insurance Company. Heavily challenged my skills with building complex UIs. Various input validations such as passwords, card numbers, national Saudi IDs, OTPs. Clean React Componentized Code.",
     image: "/projects/tameeni.png",
     gitUrl: "",
-    previewUrl:
-      "https://tameeni-fu3ktpd4h-muhammed-youssrys-projects.vercel.app/",
+    previewUrl: "https://tameeni-muhammed-youssrys-projects.vercel.app/",
     skills: [
       "react",
       "typescript",
