@@ -71,7 +71,7 @@ export const projects = [
     id: "axczxfwqdxcasd4123-213asdxcasd235",
     title: "Law Firm",
     description:
-      "Law Firm Freelance Website. The most of my creations that i'm proud of in terms of ui. It's Just a pleasing to the eye. I created it with Next.js and Tailwind. I used Framer Motion for animations and Shadcn UI for styling.",
+      "Law Firm Freelance Website that i've replaced the client's content with dummy data. The most of my creations that i'm proud of in terms of ui. It's Just a pleasing to the eye. I created it with Next.js and Tailwind. I used Framer Motion for animations and Shadcn UI for styling.",
     image: "/projects/law-firm.png",
     gitUrl: "",
     previewUrl: "https://law-firm-azure-seven.vercel.app",
@@ -81,7 +81,7 @@ export const projects = [
     id: "asdjh321h120-321axxsd",
     title: "Tameeni",
     description:
-      "Tameeni is one of my latest freelance web projects. It is a React TypeScript app leverage Socket.io to help with chat and instant admin premissions. Saudi Insurance Company. Heavily challenged my skills with building complex UIs. Various input validations such as passwords, card numbers, national Saudi IDs, OTPs. Clean React Componentized Code.",
+      "Tameeni is one of my latest freelance web projects, it's a preview verison excluding the client's content and some real-time features. It is a React TypeScript app leverage Socket.io to help with chat and instant admin premissions. Saudi Insurance Company. Heavily challenged my skills with building complex UIs. Various input validations such as passwords, card numbers, national Saudi IDs, OTPs. Clean React Componentized Code.",
     image: "/projects/tameeni.png",
     gitUrl: "",
     previewUrl: "https://tameeni-muhammed-youssrys-projects.vercel.app/",
