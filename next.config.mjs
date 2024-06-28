@@ -10,6 +10,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "nyctophilus.github.io",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/Nyctophilus/**",
+      },
     ],
   },
 };
