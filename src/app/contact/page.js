@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Socials from "@/components/socials";
+import SlideToRight from "@/components/TextStyles/SlideToRight";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
 
   const form = useRef();
 
@@ -46,20 +46,7 @@ const Contact = () => {
       <div className="h-full flex flex-col lg:flex-row px-4 gap-12 lg:gap-2 container mx-auto">
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-12 items-center justify-center">
           <div className="text-center text-6xl">
-            {text.split("").map((letter, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: index * 0.1,
-                }}
-              >
-                {letter}
-              </motion.span>
-            ))}
+            <SlideToRight>Say Hello</SlideToRight>
             😊
           </div>
           <p className="font-semibold px-12">

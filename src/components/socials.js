@@ -39,19 +39,6 @@ const Socials = ({ toggleBtn }) => {
           />
         </Link>
       </FramerMagnetic>
-      <FramerMagnetic>
-        <Link
-          href="https://www.instagram.com/muhammed_yuossry/"
-          target="_blank"
-        >
-          <Image
-            src="/instagram.png"
-            alt="instagram logo"
-            height={24}
-            width={24}
-          />
-        </Link>
-      </FramerMagnetic>
 
       {toggleBtn && (
         <Suspense>

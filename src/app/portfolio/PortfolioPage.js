@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const PortfolioPage = ({ projects = [] }) => {
   return (
-    <motion.div
+    <motion.main
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -78,7 +78,7 @@ const PortfolioPage = ({ projects = [] }) => {
           </Link>
         </div>
       </section>
-    </motion.div>
+    </motion.main>
   );
 };
 export default PortfolioPage;
