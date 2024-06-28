@@ -12,8 +12,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "raw.githubusercontent.com",
-        pathname: "/Nyctophilus/**",
+        hostname: "i.imgur.com",
       },
     ],
   },
