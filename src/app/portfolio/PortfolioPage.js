@@ -4,7 +4,7 @@ import ProjectItem from "@/components/projectItem";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const PortfolioPage = ({ projects = [] }) => {
+const PortfolioPage = ({ projects }) => {
   return (
     <motion.main
       initial={{ y: "-200vh" }}
@@ -41,9 +41,10 @@ const PortfolioPage = ({ projects = [] }) => {
       </section>
 
       <section id="projects">
-        {projects.map((project, index) => (
-          <ProjectItem key={project.id} {...project} index={index} />
-        ))}
+        {Array.isArray(projects) &&
+          projects?.map((project, index) => (
+            <ProjectItem key={project.id} {...project} index={index} />
+          ))}
       </section>
 
       <section className="snap-start h-[100dvh] flex flex-col gap-16 items-center justify-center text-center -z-10">

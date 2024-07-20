@@ -82,23 +82,24 @@ const HomePage = ({ projects }) => {
         ></div>
         <div className="flex flex-col justify-center items-start w-full mt-[0.75rem] gap-2">
           <Suspense>
-            {projects
-              .filter((project) => !project.gitUrl)
-              .map((project) => (
-                <Link
-                  target="_blank"
-                  className="flex flex-col w-full"
-                  href={project.previewUrl}
-                  key={project.title}
-                >
-                  <p className="font-bold dark:font-normal light:font-bold text-sm hover:underline leading-7">
-                    {project.title}
-                  </p>
-                  <p className="text-sm text-gray-400 font-medium dark:font-normal">
-                    {project.description}
-                  </p>
-                </Link>
-              ))}
+            {Array.isArray(projects) &&
+              projects
+                .filter((project) => !project.gitUrl)
+                .map((project) => (
+                  <Link
+                    target="_blank"
+                    className="flex flex-col w-full"
+                    href={project.previewUrl}
+                    key={project.title}
+                  >
+                    <p className="font-bold dark:font-normal light:font-bold text-sm hover:underline leading-7">
+                      {project.title}
+                    </p>
+                    <p className="text-sm text-gray-400 font-medium dark:font-normal">
+                      {project.description}
+                    </p>
+                  </Link>
+                ))}
           </Suspense>
         </div>
       </div>
