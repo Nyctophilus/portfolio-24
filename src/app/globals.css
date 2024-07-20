@@ -9,8 +9,8 @@ html{scroll-behavior: smooth;}
 ::-webkit-scrollbar {@apply w-1 }
 ::-webkit-scrollbar-thumb {border: 2px solid var(--background-start-rgb);@apply bg-amber-600 rounded-2xl }
 ::-webkit-scrollbar-track {@apply bg-blue-100 dark:bg-slate-950 }
-.btn {@apply capitalize px-5 py-2 border ring-1 ring-black dark:invert rounded-xl text-black bg-white hover:bg-black hover:text-white duration-300;}
-.btn-alt {@apply capitalize px-5 py-2 ring-1 ring-black dark:invert rounded-xl bg-black  text-white hover:bg-white  hover:text-black duration-300;}
+.btn {@apply w-fit px-2 md:px-4 py-1 capitalize border ring-1 ring-black dark:invert rounded-md text-black font-bold bg-white hover:bg-black hover:scale-95 hover:text-white duration-300;}
+.btn-alt {@apply w-fit px-2 md:px-4 py-1 capitalize ring-1 ring-black dark:invert rounded-md bg-black font-bold text-white hover:bg-white hover:scale-95 hover:text-black duration-300;}
 .dark{--primary: black;background-color: #52527a;}
 .toggleBtn {
   height: 40px;

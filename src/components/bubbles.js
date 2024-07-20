@@ -1,6 +1,6 @@
 const Bubbles = () => {
   return (
-    <div className="absolute h-1/2 w-1/3 z-10 right-0">
+    <div className="absolute h-1/2 w-1/3 z-10 right-0 bottom-3">
       <span className="size-7 absolute left-[25%] rounded-full shadow-[inset_-2px_-2px_8px_rgba(0,0,0,.25),_inset_2px_2px_8px_rgba(255,255,255,.5)] bg-[linear-gradient(180deg,#F560B6_0,#F2446C_100%)] animate-bubbles"></span>
       <span
         className="size-5 absolute left-[40%] top-[40%] rounded-full shadow-[inset_-2px_-2px_8px_rgba(0,0,0,.25),_inset_2px_2px_8px_rgba(255,255,255,.5)] bg-[linear-gradient(180deg,#8980F7_0,#4136C1_100%)] animate-bubbles"

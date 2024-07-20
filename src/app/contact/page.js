@@ -50,13 +50,11 @@ const Contact = () => {
             😊
           </div>
           <p className="font-semibold px-12">
-            I&apos;m currently looking for new opportunities, my inbox is always
-            open. Whether you have a question or just want to say hi, I&apos;ll
-            try my best to get back to you!
+            Hi there! I&apos;m always open to new opportunities and I&apos;d
+            love to hear from you. Whether you have a question or just want to
+            say hi, feel free to reach out. I&apos;ll do my best to get back to
+            you as soon as I can!
           </p>
-          <span className="self-start ps-12 -mt-8">
-            <Socials />
-          </span>
         </div>
         <form
           onSubmit={sendEmail}
