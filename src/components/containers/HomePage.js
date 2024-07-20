@@ -7,7 +7,7 @@ import Bubbles from "@/components/bubbles";
 import Socials from "@/components/socials";
 import { Suspense } from "react";
 
-const HomePage = async ({ projects }) => {
+const HomePage = ({ projects }) => {
   return (
     <motion.section
       initial={{ y: "-200%" }}
@@ -89,6 +89,7 @@ const HomePage = async ({ projects }) => {
                   target="_blank"
                   className="flex flex-col w-full"
                   href={project.previewUrl}
+                  key={project.title}
                 >
                   <p className="font-bold dark:font-normal light:font-bold text-sm hover:underline leading-7">
                     {project.title}
