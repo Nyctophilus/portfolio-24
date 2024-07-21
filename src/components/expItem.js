@@ -15,7 +15,7 @@ const ExpItem = ({ i, title, desc, date, company }) => {
         {title}
       </div>
       <div className="flex gap-1 flex-col my-4 px-4 text-pretty">
-        {desc.map((d) => (
+        {desc?.map((d) => (
           <div key={d} className="text-sm">
             • {d}
           </div>

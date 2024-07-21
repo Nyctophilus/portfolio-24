@@ -30,7 +30,17 @@ export const skills = [
   "git & github",
 ];
 
-export const exp = [
+export const expriences = [
+  {
+    title: "Frontend Developer (remote)",
+    desc: [
+      "developed solutions for seamless interactions between admin dashboard and clients.",
+      "improved UI of interchanging OTPs, payments, chat messages.",
+      "enhanced customer service chat support based on real-time Socket.io",
+    ],
+    date: "May 2024 - present",
+    company: "El-Ezz Gate",
+  },
   {
     title: "Fullstack Developer (remote)",
     desc: [

@@ -3,7 +3,7 @@ import Bubbles from "@/components/bubbles";
 import ExpItem from "@/components/expItem";
 import ScrollSVG from "@/components/scrollSVG";
 import Skill from "@/components/skill";
-import { exp, skills } from "@/static-data";
+import { expriences, skills } from "@/static-data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -121,8 +121,8 @@ const AboutPage = () => {
               whileInView={{ x: 0 }}
               transition={{ duration: 1 }}
             >
-              {exp.map((e, i) => (
-                <ExpItem key={e.title + e.desc} i={i} {...e} />
+              {expriences.map((exp, i) => (
+                <ExpItem key={exp.title + exp.desc} i={i} {...exp} />
               ))}
             </motion.div>
           </div>
