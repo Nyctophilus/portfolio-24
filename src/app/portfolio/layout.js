@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Portfolio",
-  description: "Portfolio page",
+  description: "This page showcases my projects in web development.",
 };
 
 const PortfolioLayout = ({ children }) => {
