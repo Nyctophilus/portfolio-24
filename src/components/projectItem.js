@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Skill from "./skill";
 
 const ProjectItem = ({
-  id,
+  _id,
   title,
   description,
   image,
@@ -21,11 +21,11 @@ const ProjectItem = ({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opcityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-
   return (
     <div
       className="snap-start mx-auto min-h-[100dvh] pt-20 flex items-center justify-center bg-gradient-to-r from-sky-50 to-indigo-100 dark:from-slate-950 dark:to-[#0f0505]"
-      key={id}
+      id={title.toLowerCase().replaceAll(" ", "-")}
+      key={_id}
     >
       <motion.div
         ref={ref}

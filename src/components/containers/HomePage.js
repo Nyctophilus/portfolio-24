@@ -66,9 +66,10 @@ const HomePage = ({ projects }) => {
         <Bubbles />
 
         <p className="text-sm">
-          Hello! digital art is my passion. Generally I'm a Software Engineer
-          focus on frontend development with React.js. I love to read books and
-          write clean code and I'm always looking for new challenges.
+          Hello! digital art is my passion. Generally I&apos;m a Software
+          Engineer focus on frontend development with React.js. I love to read
+          books and write clean code and I&apos;m always looking for new
+          challenges.
         </p>
         <div className="flex gap-x-6 mt-4">
           <Link
