@@ -6,7 +6,7 @@ const Skill = ({ skill, i, portfolio }) => {
       key={skill}
       className={`capitalize rounded-lg p-2 text-sm cursor-pointer ${
         portfolio ? "dark:invert" : ""
-      } bg-black text-white hover:bg-white hover:text-black`}
+      } bg-black text-white hover:bg-white hover:text-black duration-300 transition-colors`}
       whileInView={{
         opacity: [0, 1],
       }}

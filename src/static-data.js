@@ -15,10 +15,14 @@ export const skills = [
   "redux",
   "framer-motion",
   "shadcnUI",
+  "zod",
+  "Next-Auth",
   "nodejs",
   "MySQL",
   "expressjs",
+  "OOP",
   "REST APIs",
+  "jest",
   "sass",
   "pug.js",
   "bootstrap",
@@ -28,18 +32,22 @@ export const skills = [
   "firebase",
   "gulp",
   "git & github",
+  "vercel",
 ];
 
 export const expriences = [
   {
     title: "Frontend Developer (remote)",
     desc: [
-      "developed solutions for seamless interactions between admin dashboard and clients.",
-      "improved UI of interchanging OTPs, payments, chat messages.",
-      "enhanced customer service chat support based on real-time Socket.io",
+      "The Team develops clones of well-known Saudi websites for marketing purposes the clients use. We design real-time solutions for seamless interactions, and messaging between administrators and clients.",
+      "During my time in Ezz Gate, I Integrated Socket.io Realtime requests in frontend.",
+      "Created pixel-perfect art some were clones, and other websites were my sole design and inspiration.",
+      "Enhanced performance by 43% by implementing Code splitting and dynamic loading, which reduced the initial load.",
+      "Ensured all forms input validations and sanitizing using Zod",
+      "Managed hosting on VPS and shared hosting services with the help of Cloud Panel",
     ],
     date: "Mar 2024 - present",
-    company: "El-Ezz Gate (Jordan)",
+    company: "Ezz Gate (Jordan)",
   },
   {
     title: "Fullstack Developer (remote)",
@@ -50,16 +58,16 @@ export const expriences = [
       "responsible for optimizing Performance and enchanting SEO using Next.js features.",
       "responsible for creating Appling and smooth UIs and animations with the help of libs such as framer-motion & shadcn/ui.",
     ],
-    date: "Jan 2024 - Mar 2024",
+    date: "Feb 2024 - Mar 2024",
     company: "Romeya Agency (Qatar)",
   },
   {
     title: "Started freelancing",
     desc: [
-      "I've managed to secure my first freelance gig with an English client and developed a complete website for law purposes and her business. the website was over 40 pages.",
-      "Cooperated with backend dev to integrate payment gateway via Al-Ahly bank.",
+      "I launched my career in web development through freelancing. I successfully landed my first international client, an English businesswoman in the legal sector. For her, I designed and built a comprehensive website exceeding 40 pages to showcase her law practice and business offerings.",
+      "This project also involved collaboration with a backend developer to implement a payment gateway integrated with Al-Ahly bank, enhancing the site's functionality.",
     ],
-    date: "Dec 2021 - present",
+    date: "Dec 2021 - Apr 2022",
     company: "",
   },
   {

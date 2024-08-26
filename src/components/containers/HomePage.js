@@ -1,11 +1,23 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Bubbles from "@/components/bubbles";
-import Socials from "@/components/socials";
-import { Suspense } from "react";
+import Loading from "@/app/loading";
+
+const Bubbles = dynamic(() => import("@/components/bubbles"), {
+  loading: () => <Loading />,
+});
+const Socials = dynamic(() => import("@/components/socials"), {
+  loading: () => <Loading />,
+});
+const StackSection = dynamic(
+  () => import("./StackSection").then((mod) => mod.StackSection),
+  {
+    loading: () => <Loading />,
+  }
+);
 
 const HomePage = ({ projects }) => {
   return (
@@ -54,10 +66,9 @@ const HomePage = ({ projects }) => {
         <Bubbles />
 
         <p className="text-sm">
-          I&apos;m Computer Engineering graduate specializing in Web
-          Development. I fond of creating beautiful fluid eye-pleasing websites.
-          I&apos;m a highly self-motivated Agilest developer, I create
-          full-stack web apps by (Next14 | Tailwind | Mongoose)
+          Hello! digital art is my passion. Generally I'm a Software Engineer
+          focus on frontend development with React.js. I love to read books and
+          write clean code and I'm always looking for new challenges.
         </p>
         <div className="flex gap-x-6 mt-4">
           <Link
@@ -74,34 +85,47 @@ const HomePage = ({ projects }) => {
       </div>
 
       <div className="flex flex-col w-full">
-        <h2 className="font-bold dark:font-semibold">freelance work 🖥️</h2>
+        <h2 className="capitalize text-xl font-bold dark:font-semibold">
+          freelance work 🖥️
+        </h2>
         <div
           data-orientation="horizontal"
           role="none"
           className="shrink-0 h-[1px] mt-2 w-full bg-zinc-400 dark:bg-zinc-800"
         ></div>
         <div className="flex flex-col justify-center items-start w-full mt-[0.75rem] gap-2">
-          <Suspense>
-            {Array.isArray(projects) &&
-              projects
-                .filter((project) => !project.gitUrl)
-                .map((project) => (
-                  <Link
-                    target="_blank"
-                    className="flex flex-col w-full"
-                    href={project.previewUrl}
-                    key={project.title}
-                  >
-                    <p className="font-bold dark:font-normal light:font-bold text-sm hover:underline leading-7">
-                      {project.title}
-                    </p>
-                    <p className="text-sm text-gray-400 font-medium dark:font-normal">
-                      {project.description}
-                    </p>
-                  </Link>
-                ))}
-          </Suspense>
+          {Array.isArray(projects) &&
+            projects
+              .filter((project) => !project.gitUrl)
+              .map((project) => (
+                <Link
+                  target="_blank"
+                  className="flex flex-col w-full"
+                  href={project.previewUrl}
+                  key={project.title}
+                >
+                  <p className="font-bold dark:font-normal light:font-bold text-sm hover:underline leading-7">
+                    {project.title}
+                  </p>
+                  <p className="ps-1 text-sm text-gray-400 font-medium dark:font-normal">
+                    {project.description}
+                  </p>
+                </Link>
+              ))}
         </div>
+      </div>
+
+      <div className="mt-10 flex flex-col w-full">
+        <h2 className="capitalize text-xl font-bold dark:font-semibold">
+          Tech Stack 🛠️
+        </h2>
+        <div
+          data-orientation="horizontal"
+          role="none"
+          className="shrink-0 h-[1px] mt-2 w-full bg-zinc-400 dark:bg-zinc-800"
+        ></div>
+
+        <StackSection />
       </div>
     </motion.section>
   );

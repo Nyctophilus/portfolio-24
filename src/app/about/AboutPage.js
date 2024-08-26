@@ -42,8 +42,25 @@ const AboutPage = () => {
               whileInView={{ x: 0 }}
               className="text-lg"
             >
-              I graduated from Engineering Faculty, computer major. I got B-Eng
-              Degree with total degree: &apos;B+&apos;
+              My name is Muhammed Fayad, I&apos;m located in Alexandria
+              originally. Graduated from Pharos University, Engineering Faculty
+              in computer major with a B-Eng Degree with total degree:
+              &apos;B+&apos;
+            </motion.p>
+            <motion.p
+              initial={{ x: -200 }}
+              whileInView={{ x: 0 }}
+              className="text-lg"
+            >
+              I have a year of freelance experience in web development. My
+              projects have included dashboards, real-estate websites, blogs,
+              and portfolios. I specialize in{" "}
+              <strong>React, Next.js, and Tailwind</strong> for front-end
+              development. Additionally, I am familiar with back-end
+              technologies such as Node, Express, and Mongoose. My experience
+              extends to hosting websites on both shared hosting and VPS
+              servers. I&apos;m excited to showcase my skills and passion for
+              clean, efficient code!
             </motion.p>
             <motion.p
               initial={{ x: -200 }}
@@ -60,10 +77,10 @@ const AboutPage = () => {
               whileInView={{ x: 0 }}
               className="text-lg"
             >
-              My graduation project was in AI & Machine learning specialization.
-              GANS model to colorize grey scale videos based on Generative
-              adversarial networks deep learning techniques. I got grade
-              &apos;A&apos; on the project
+              My <strong>graduation project</strong> was in AI & Machine
+              learning specialization. GANS model to colorize grey scale videos
+              based on Generative adversarial networks deep learning techniques.
+              I got grade &apos;A&apos; on the project
             </motion.p>
             <motion.span
               initial={{ x: -200 }}
