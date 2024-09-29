@@ -90,7 +90,9 @@ const ProjectItem = ({
               target="_blank"
               className="p-2 text-sm md:p-4 md:text-md ring ring-gray-800 dark:ring-white lg:text-lg text-white bg-gray-800 hover:bg-transparent hover:text-gray-800 transition-colors dark:bg-white dark:text-gray-800 dark:hover:text-white dark:hover:bg-transparent font-semibold m-4 rounded"
             >
-              See Demo
+              {previewUrl.match(/\b(github|vercel|netlify)\b/)
+                ? "See Demo"
+                : "Live Website"}
             </Link>
           </div>
         </div>
